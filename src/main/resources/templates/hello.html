@@ -5,8 +5,10 @@
     <title>Hello</title>
 </head>
 <body>
-Hello world! Boris
+<div th:text="${'Hello, ' + person.getUsername() + '!'}"></div>
 <br/>
-<a href="/logout">Выйти</a>
+<form th:action="@{/logout}" th:method="POST">
+    <input type="submit" value="Logout">
+</form>
 </body>
 </html>
